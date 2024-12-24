@@ -1,0 +1,204 @@
+*, ::before, ::after{margin: 0px; box-sizing: border-box;}
+/* *{outline: solid 1px red;} */
+a{text-decoration: none;}
+button{padding: 0px; cursor: pointer;}
+:disabled{cursor: not-allowed;}
+img{vertical-align: bottom;}
+iframe{border: 0px;}
+ul{list-style: none; padding: 0px;}
+label{display: inline-block;}
+:focus{outline: 0px;}
+
+
+html{
+    font-size: 15px;
+    --fontStyle: "Poppins", serif;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+
+    /* Colors */
+    --primaryColor:#ed242e;
+    --whiteColor:#ffffff;
+    --darkColor:#151515;
+    --blueColor:#00132b;
+}
+
+body{font: 16px var(--fontStyle);}
+
+.container{max-width: 1200px; margin: 0px auto; padding: 0px 1rem;}
+.container-large{max-width: 1600px; margin: 0px auto; padding: 0px 1rem;}
+
+.row{display: flex; flex-flow:row wrap; margin: 0px -1rem;}
+[class^="col-"]{padding: 0px 1rem; flex: 1 0 auto;}
+
+/* Grid Style */
+.col-1{flex-basis: 8.33%; max-width: 8.33%;}
+.col-2{flex-basis: 16.66%; max-width: 16.66%;}
+.col-3{flex-basis: 25%; max-width: 25%;}
+.col-4{flex-basis: 33.33%; max-width: 33.33%;}
+.col-5{flex-basis: 41.66%; max-width: 41.66%;}
+.col-6{flex-basis: 50%; max-width: 50%;}
+.col-7{flex-basis: 58.33%; max-width: 58.33%;}
+.col-8{flex-basis: 66.66%; max-width: 66.66%;}
+.col-9{flex-basis: 75%; max-width: 75%;}
+.col-10{flex-basis: 83.33%; max-width: 83.33%;}
+.col-11{flex-basis: 91.66%; max-width: 91.66%;}
+.col-12{flex-basis: 100%; max-width: 100%;}
+
+.flex{display: flex;}
+.align_center{align-items: center;}
+.justify_space_btw{justify-content: space-between;}
+.justify_center{justify-content: center;}
+.img-resp{ max-width: 100%; height: auto;}
+p{font-size: 17px; margin-bottom: 2rem;}
+.text-center{text-align: center;}
+
+/* btn */
+.btn{padding: 18px 50px; font-size: 17px; font-weight: 400; outline: 0; border: 0; border-radius: 0; cursor: pointer; display: inline-block;}
+.btn.btn_red{background: var(--primaryColor); color: var(--whiteColor);}
+.btn.btn_white{background: var(--whiteColor); color: var(--darkColor);}
+.btn.btn_blue{background: var(--blueColor); color: var(--whiteColor);}
+
+/* Hover btn */
+.btn_red:hover{background: var(--blueColor);}
+.btn_blue:hover{background: var(--primaryColor);}
+.btn_white:hover{background: var(--primaryColor); color: var(--whiteColor);}
+
+
+/* Heading */
+.title{margin-bottom: 40px;}
+.title h2{font-size: 45px; line-height: 45px; text-transform: uppercase;}
+.title h2 strong{display: block; font-weight:700;}
+.title p{margin: 15px 0px;}
+
+/* Image Block */
+.image-block{position: relative; margin: 0px auto;}
+
+
+
+/* Header */
+header{background: var(--primaryColor); color: var(--whiteColor); position: sticky; top: 0; z-index: 4;}
+.nav_baar{display: flex; align-items: center; justify-content: space-between;}
+.topIcon{background: #00132b; padding: 28px 32px;}
+.topIcon i{font-size: 20px; color: var(--whiteColor);}
+
+header h1{font-size: 30px; position: relative; text-transform: uppercase;}
+header h1 a{color: inherit;}
+header h1 a img{background: url(../img/logo.png) no-repeat center center; position: absolute; top: 65px; left: 0; right: 0; margin: 0px auto;}
+header h1::after{clip-path: circle(40%); background: #ed242e; position: absolute; content: ""; top: -64px; height: 210px; z-index: -1; width: 210px; left: 0; right: 0; transform: translateX(-22px);}
+nav h1 a:hover{background:transparent;}
+
+nav ul{display: flex; align-items: center;}
+nav li{margin: 0px 15px;}
+nav a{color: inherit; display: block; padding: 0px 15px; line-height: 80px;}
+nav a:hover{background: var(--blueColor);}
+
+
+/* =========================== hero banner =========================== */
+.hero_banner{height: 550px; position: relative; top:0;}
+.hero_content{display: flex; flex-direction: column; width: 60%; padding: 100px 0px 0px 0px;}
+.hero_content h1{font-size: 5.933rem; line-height: 87px; font-weight: 800; text-align: left; color: var(--whiteColor);}
+.btn_section{margin: 80px 0px 70px;}
+.btn_section a{margin-right: 10px;}
+.btn_section .btn_red:hover{background: var(--whiteColor); color: var(--darkColor);}
+
+
+/* =========================== About =========================== */
+.section_about{margin: -100px 0px 50px; position: relative;}
+.about_block{background: var(--whiteColor); border-radius: 50px; padding: 100px 40px; box-shadow: 2px 0px 40px rgba(13,3, 3, 20%);}
+
+.title_line_bottom{font-size: 45px; position: relative; margin-bottom: 40px;}
+.title_line_bottom::after{position: absolute; content: ""; left: 0px; width: 83px; height: 6px; background: var(--primaryColor); bottom: 2px;}
+
+.about_block p{margin-bottom: 30px;}
+.about-image{position: relative;}
+
+
+/* =========================== what Corona =========================== */
+.whatcorona{padding: 55px 0px; color: var(--darkColor);}
+
+
+
+/* =========================== Protect =========================== */
+.protect{padding: 55px 0px;}
+.bg_wrap{background: #0d0303; padding: 190px 100px 80px; border-radius: 100px; position: relative; overflow: hidden; z-index: 0;}
+.bg_wrap::before{position: absolute; content: ""; inset: 0; background: url(../img/corona_virus2.webp) no-repeat center center / cover; z-index: -1;}
+
+.card-block{text-align: center;}
+.corona_card{background: var(--whiteColor); border-radius: 23px; padding: 30px 10px; color: var(--darkColor); text-align: center; margin: 0px 0px 30px; min-height: 250px;}
+.card_image{margin-bottom: 20px; height: 100px; overflow: hidden;}
+.card_data{margin: 0px 0px 10px; font-size: 17px;}
+.card_data strong{display: block; font-weight: 600; margin-bottom: 20px;}
+
+
+
+/* =========================== Corona Case =========================== */
+.corona_case{padding: 40px 0px;}
+.case_card{background: var(--whiteColor); padding: 15px 15px; color: var(--darkColor); text-align: center; margin: 0px 0px 30px; box-shadow: 2px 0px 40px rgba(13,3, 3, 20%); position: relative;}
+.case-image{overflow: hidden;}
+.case-data{padding: 20px 0px 20px;}
+.case-data h3{font-size: 30px; margin-bottom:18px;}
+
+.case-icon{position: absolute; bottom: -40px; left: 0; right: 0;}
+
+
+/* =========================== Doctor Say =========================== */
+.doctor_say{padding: 40px 0px;}
+.doctor_card{background: var(--whiteColor); padding: 15px 15px; color: var(--darkColor); text-align: center; margin: 80px 0px 30px; box-shadow: 2px 0px 40px rgba(13,3, 3, 20%);}
+.doctor-image{overflow: hidden; width: 100px; height: 100px; border-radius: 50%; margin:-74px auto 0px}
+.doctor-data{padding: 20px 0px 20px;}
+.doctor-data h3{font-size: 30px; margin-bottom:18px;}
+
+.doctor-icon{margin: 0px auto; text-align: center;}
+.doctor-icon i{font-size: 30px;}
+
+
+/* =========================== Every Update =========================== */
+.everyUpdate{padding: 40px 0px 0px;}
+.everyUpdate_bg{background: url("../img/virus_bg.webp") no-repeat center center / cover; padding:84px 0px 52px;}
+
+.subscribe_form{margin: 0px; text-align: center;}
+.subscribe_form .subscribeLabel{border-radius: 40px; border: solid 1px var(--whiteColor); display: block; width: 100%; margin: 0px 0px 30px;}
+.subscribeLabel input{color:var(--whiteColor); font-family: var(--fontStyle); font-size: 1.2rem; background: transparent; padding: 20px 40px; border: 0px; width: 100%;}
+.subscribeLabel input::placeholder{color: var(--whiteColor);}
+.subscribe_form .btn.btn_blue{border-radius: 30px;}
+
+
+/* =========================== Footer =========================== */
+footer{background: #111111; color: var(--whiteColor); font-family: var(--fontStyle); padding: 100px 0px 0px;}
+.footer_content h4{font-size: 1.3rem; margin-bottom: 20px; text-transform: uppercase;}
+.footer_menu{margin: 0px;}
+.footer_content li{margin-bottom: 10px;}
+.footer_menu li a{font-size: 1.1rem; color: var(--whiteColor);}
+.footer_menu li a:hover{color: var(--primaryColor);}
+
+
+li.contact-info{margin-bottom: 10px; display: flex; align-items:start;}
+.contact-info-icon{margin:0px 15px 0px 0px;}
+.contact-info-icon i{color: #ced9e1; font-size: 18px;}
+.contact-info .contact-text{margin: 0px;}
+.contact-text p{font-size: 1.2rem; color: #ced9e1; font-weight: 300; margin: 0px;}
+
+
+.copyright{margin: 50px auto 0px; border-top: solid 2px #4f4f4f; padding: 28px 0px 20px; width: 70%;}
+.copyright p{text-align: center; font-size: 1.1rem; color: var(--whiteColor); margin: 0px;}
+
+/* Responsive */
+@media screen and (max-width:1220px){
+    html{ font-size: 13px;}
+    h2{ font-size: 62px;}
+}
+
+@media screen and (max-width:980px){
+    
+}
+
+@media screen and (max-width:767px){
+   
+}
+
+
+@media screen and (max-width:460px){
+    
+}
